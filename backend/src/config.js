@@ -1,0 +1,2 @@
+import 'dotenv/config';
+export const config={port:Number(process.env.PORT||4000),db:process.env.DATABASE_URL,redis:process.env.REDIS_URL,secret:process.env.JWT_SECRET||'development-only-change-me',chunkSize:Number(process.env.CHUNK_SIZE||4194304),replication:Number(process.env.REPLICATION_FACTOR||2),maxFileSize:Number(process.env.MAX_FILE_SIZE||1073741824),storageRoot:process.env.STORAGE_ROOT||new URL('../../storage',import.meta.url).pathname,cors:process.env.CORS_ORIGIN||'http://localhost:5173'};
